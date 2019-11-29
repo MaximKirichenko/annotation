@@ -1,11 +1,13 @@
 package lab1.practice;
 
+import org.springframework.stereotype.Service;
 
 public class MessagePrinter implements Printer {
     private String message;
 
     // создать аннотацию и аннотировать поле так, что бы при поднятии контекста
     // в поле инжектилось случайное число от 0 до числа заданого при помощи аннотации
+    @RandomCount
     private int count;
 
     public void print() {
